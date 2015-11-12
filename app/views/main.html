@@ -1,0 +1,45 @@
+<div class="container">
+  <h1> Расчет стоимости</h1>
+  <form class="form-inline">
+    <div class="form-group  col-sm-6">
+      <label for="websaites" class="col-sm-4">Количество сайтов</label>
+      <button ng-click="toMinus()">-</button>
+      <input type="number" id='websaites' name="name" value="" ng-model="countWebSaite" ng-keyup='countWebSaite'>
+      <button ng-click="toPlus()">+</button>
+    </div>
+    <div class="form-group  col-sm-6">
+    </div>
+  </form>
+</div>
+<div class="col-sm-4" ng-repeat="websaite in saites">
+
+  <h2> Номера для сайта {{websaite}}</h2>
+  <input type="number" ng-model="counterPhones">
+  <input type="button" ng-click="toMinusNumber()" value="-">
+  <input type="button" ng-click="toPlusNumber()" value="+">
+  <div ng-repeat='number in phonesNumber'>
+  <select name="" id="">
+    <option value="">
+      Питер
+    </option>
+    <option value="">
+      Москва
+    </option>
+    <option value="">
+      Екатиринбург
+    </option>
+  </select>
+  </div>
+</div>
+<div class="col-sm-12">
+  <hr>
+  <input type="button" name="name" value="Итого" ng-click="toAll()">
+  <h2>разовый платеж 500 рублей</h2>
+  <h3>Абонементская плата за 6 месяцев,  количество сайтов :{{countWebSaite}}  <span ng-if="counterPhones === 0"> телефонов {{counterPhones}} </span></h3>
+
+
+</div>
+
+<!-- <form-dir></form-dir>
+<form-dir></form-dir>
+<form-dir></form-dir> -->
